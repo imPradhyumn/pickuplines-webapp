@@ -33,7 +33,7 @@ const CategoryPage = ({ params, searchParams }: Params) => {
       })}
 
       <Pagination
-        totalPages={Math.floor(pickupLines.length / LINES_PER_PAGE)}
+        totalPages={Math.floor(pickupLines.length / LINES_PER_PAGE) + 1}
         currentPage={pageNum}
         category={category}
       />
