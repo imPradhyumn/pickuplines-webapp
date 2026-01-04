@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Pickup Lines - Funny, Cute, Cheesy, Dirty & more",
+    default: "Pickup Lines Hub - Funny, Cute, Cheesy, Dirty & more",
     template: "%s | Pickup Lines",
   },
   description:
@@ -31,10 +31,6 @@ export const metadata: Metadata = {
     "dating lines",
     "flirty lines",
   ],
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/favicon.ico",
-  },
   authors: [{ name: "Pickup Lines App" }],
   creator: "Pickup Lines App",
   metadataBase: new URL("https://top-pickuplines.vercel.app"), // change after deploy
@@ -49,7 +45,7 @@ export const metadata: Metadata = {
         url: "/og-image.png", // add this image to /public
         width: 1200,
         height: 630,
-        alt: "Pickup Lines App",
+        alt: "Pickup Lines Hub Webapp",
       },
     ],
     locale: "en_US",
