@@ -16,10 +16,12 @@ const CategoryPage = ({ params, searchParams }: Params) => {
   const category = path.split("-")[0];
   const pickupLines = getLinesBasedOnCategory(category);
 
-  const linesToRender = pickupLines.slice(pageNum - 1, LINES_PER_PAGE);
+  const linesToRender = pickupLines?.slice(pageNum - 1, LINES_PER_PAGE);
 
   const desc =
     category === "dirty" ? "make him/her wet ;)" : "make him/her blush ;)";
+
+  if (!linesToRender) return <h1>Oops!! No lines in this category yet</h1>;
 
   return (
     <div className="md:my-5">
