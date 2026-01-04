@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     "dating lines",
     "flirty lines",
   ],
+  other: {
+    "google-site-verification": "DCGuj6zDRtC9iwboP6PxwPYuT0w2Z656qQTabssOHOU",
+  },
   authors: [{ name: "Pickup Lines App" }],
   creator: "Pickup Lines App",
   metadataBase: new URL("https://pickuplineshub.vercel.app"), // change after deploy
@@ -43,8 +46,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png", // add this image to /public
-        width: 1200,
-        height: 630,
+        width: 983,
+        height: 358,
         alt: "Pickup Lines Hub Webapp",
       },
     ],
