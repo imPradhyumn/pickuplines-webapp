@@ -5,5 +5,4 @@ export enum CATEGORIES {
   DIRTY = "dirty",
   SCIENCE = "science",
   MATHS = "maths",
-  CLEVER = "clever",
 }
