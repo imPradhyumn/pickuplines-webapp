@@ -5,12 +5,23 @@ import React from "react";
 
 const LINES_PER_PAGE = 20;
 
-type Params = {
+type ParamsProps = {
   params: { category: string };
   searchParams: { page?: string };
 };
 
-const CategoryPage = ({ params, searchParams }: Params) => {
+function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function generateMetadata({ params }: ParamsProps) {
+  const path = params.category.toLowerCase();
+  const category = path.split("-")[0];
+  console.log("🚀 ~ generateMetadata ~ category:", category);
+  return { title: `${capitalize(category)} Pickup Lines` };
+}
+
+const CategoryPage = ({ params, searchParams }: ParamsProps) => {
   const pageNum = parseInt(searchParams?.page ?? "1");
   const path = params.category.toLowerCase();
   const category = path.split("-")[0];

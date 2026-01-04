@@ -20,7 +20,7 @@ const NavigationBtns = () => {
             key={item}
             className={`capitalize rounded text-sm px-2 py-1 ${classNameBasedOnPath}`}
           >
-            <Link href={item}>{item}</Link>
+            <Link href={`${item}-pickup-lines`}>{item}</Link>
           </button>
         );
       })}
