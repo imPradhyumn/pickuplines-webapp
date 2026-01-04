@@ -1,11 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const EMOJIS = ["❤️", "😍", "✨", "💓", "🥰", "💌"];
 
 const Card = ({ line, index }: { line: string; index: number }) => {
+  const [copyMessage, setCopyMessage] = useState("Copy");
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(line);
+    setCopyMessage("Copied!!");
+    setTimeout(() => {
+      setCopyMessage("Copy");
+    }, 2000);
   };
 
   return (
@@ -18,7 +24,10 @@ const Card = ({ line, index }: { line: string; index: number }) => {
       </div>
       <hr />
       <p className="m-0">{line}</p>
-      <button className="self-end mb-1" onClick={copyToClipboard}>
+      <button
+        className="self-end mb-1 active:scale-[0.9]"
+        onClick={copyToClipboard}
+      >
         <div className="flex rounded-sm text-xs gap-1 text-white bg-violet-800 px-2 py-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +42,7 @@ const Card = ({ line, index }: { line: string; index: number }) => {
               d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
             />
           </svg>
-          Copy
+          {copyMessage}
         </div>
       </button>
     </div>
