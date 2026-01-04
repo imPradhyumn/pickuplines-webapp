@@ -1,7 +1,7 @@
 import { CATEGORIES } from "@/constants";
 
 export default function sitemap() {
-  const baseUrl = "https://top-pickuplines.vercel.app";
+  const baseUrl = "https://pickuplineshub.vercel.app";
   const categories = Object.values(CATEGORIES);
 
   const urls = categories.map((item) => ({

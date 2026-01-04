@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Pickup Lines App" }],
   creator: "Pickup Lines App",
-  metadataBase: new URL("https://top-pickuplines.vercel.app"), // change after deploy
+  metadataBase: new URL("https://pickuplineshub.vercel.app"), // change after deploy
   openGraph: {
     title: "Pickup Lines - Funny, Cute, Cheesy, Clever Corny, Dirty and more",
     description:
       "Browse the best pickup lines for every mood: funny, cute, dirty, science, maths & more.",
-    url: "https://top-pickuplines.vercel.app",
+    url: "https://pickuplineshub.vercel.app",
     siteName: "Best Pickup Lines",
     images: [
       {
