@@ -5,7 +5,7 @@ export default function sitemap() {
   const categories = Object.values(CATEGORIES);
 
   const urls = categories.map((item) => ({
-    url: `${baseUrl}/${item}`,
+    url: `${baseUrl}/${item}-pickup-lines`,
     lastModified: new Date(),
   }));
 
