@@ -9,9 +9,9 @@ const Header = () => {
         <span className="text-pink-600">Lines</span>
       </h1>
 
-      <button className="text-sm px-3 bg-pink-600 text-white rounded-sm shadow shadow-gray-400">
+      {/* <button className="text-sm px-3 bg-pink-600 text-white rounded-sm shadow shadow-gray-400">
         Add pickupline +
-      </button>
+      </button> */}
     </header>
   );
 };
