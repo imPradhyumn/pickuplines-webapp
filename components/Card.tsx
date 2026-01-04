@@ -23,7 +23,7 @@ const Card = ({ line, index }: { line: string; index: number }) => {
         </span>
       </div>
       <hr />
-      <p className="m-0">{line}</p>
+      <p className="m-0 text-sm md:text-base">{line}</p>
       <button
         className="self-end mb-1 active:scale-[0.9]"
         onClick={copyToClipboard}
