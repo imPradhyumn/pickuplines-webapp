@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Pickup Lines",
   },
   description:
-    "Discover the best pickup lines - funny, cute, cheesy, clever, science, maths, dirty, smooth and 18+ lines. Perfect for texting, dating apps, make him/her blush and breaking the ice.",
+    "Discover the best pickup lines - funny, cute, cheesy, clever, science, chemistry, maths, dirty, smooth and 18+ lines. Perfect for texting, dating apps, make him/her blush and breaking the ice.",
   keywords: [
     "pickup lines",
     "funny pickup lines",
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     "cheesy pickup lines",
     "clever pickup lines",
     "science pickup lines",
+    "chemistry pickup lines",
     "math pickup lines",
     "dating lines",
     "flirty lines",
