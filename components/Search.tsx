@@ -1,6 +1,21 @@
+"use client";
 import React from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const Search = () => {
+  const { push } = useRouter();
+  const pathName = usePathname();
+
+  const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.currentTarget.value;
+    if (val.length <= 2) {
+      push(`${pathName}`);
+      return;
+    }
+
+    push(`${pathName}?keyword=${val}`);
+  };
+
   return (
     <div className="px-3 rounded-xl bg-pink-300 w-full md:w-1/4 my-4 flex items-center">
       <svg
@@ -19,7 +34,8 @@ const Search = () => {
         className="bg-transparent w-full px-3 py-1
         text-sm focus:outline-0 placeholder:text-slate-900"
         alt="search-box"
-        placeholder="Search by keyword"
+        placeholder="Keyword search (atleast 3 letters)"
+        onChange={handleSearchInput}
       />
     </div>
   );

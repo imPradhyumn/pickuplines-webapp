@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavigationBtns from "@/components/Nav";
-import Search from "@/components/Search";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,7 +67,7 @@ export default function RootLayout({
 
         <main className="w-[90%] mx-auto md:w-3/4">
           <NavigationBtns />
-          <Search />
+
           {children}
         </main>
       </body>

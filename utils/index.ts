@@ -5,15 +5,26 @@ import cornyLines from "../app/data/corny.json";
 import mathLines from "../app/data/maths.json";
 import scienceLines from "../app/data/science.json";
 
-const allLines = {
-  cheesy: cheesyLines,
-  cute: cuteLines,
-  dirty: adultLines,
-  corny: cornyLines,
-  maths: mathLines,
-  science: scienceLines,
+export const getLinesBasedOnCategory = (category: string) => {
+  const allLines = {
+    cheesy: cheesyLines,
+    cute: cuteLines,
+    dirty: adultLines,
+    corny: cornyLines,
+    maths: mathLines,
+    science: scienceLines,
+  };
+  return allLines[category as keyof typeof allLines];
 };
 
-export const getLinesBasedOnCategory = (category: string) => {
-  return allLines[category as keyof typeof allLines];
+export const getLinesBasedOnKeyword = (keyword: string) => {
+  const allLines = [
+    ...cheesyLines,
+    ...cuteLines,
+    ...adultLines,
+    ...cornyLines,
+    ...mathLines,
+    ...scienceLines,
+  ];
+  return allLines.filter((line) => line.includes(keyword));
 };
