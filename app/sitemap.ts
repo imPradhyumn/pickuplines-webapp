@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categories = Object.values(CATEGORIES);
 
   const urls = categories.map((item) => ({
-    url: `${baseUrl}/${item}-pickup-lines/`,
+    url: `${baseUrl}/${item}-pickup-lines`,
     lastModified: "2026-01-05",
   }));
 
