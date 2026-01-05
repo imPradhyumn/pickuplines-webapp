@@ -22,7 +22,6 @@ export function generateMetadata({ params }: ParamsProps) {
 }
 
 const CategoryPage = ({ params, searchParams }: ParamsProps) => {
-  console.log("🚀 ~ CategoryPage ~ searchParams:", searchParams);
   const pageNum = parseInt(searchParams?.page ?? "1");
   const path = params.category.toLowerCase();
   const keyword = searchParams?.keyword ?? "";
