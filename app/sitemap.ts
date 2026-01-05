@@ -1,6 +1,7 @@
 import { CATEGORIES } from "@/constants";
+import { MetadataRoute } from "next";
 
-export default function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pickuplineshub.vercel.app";
   const categories = Object.values(CATEGORIES);
 
@@ -9,5 +10,5 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  return [{ url: baseUrl, lastModifed: new Date() }, ...urls];
+  return [{ url: baseUrl, lastModified: new Date() }, ...urls];
 }
