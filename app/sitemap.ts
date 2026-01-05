@@ -12,5 +12,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: "2026-01-05",
   }));
 
-  return [{ url: baseUrl, lastModified: "2026-01-05" }, ...urls];
+  return [{ url: baseUrl + "/", lastModified: "2026-01-05" }, ...urls];
 }
